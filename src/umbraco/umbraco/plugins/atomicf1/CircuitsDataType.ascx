@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CircuitsDataType.ascx.cs" Inherits="atomicf1.datatypes.CircuitsDataType" %>
+<asp:DropDownList ID="CircuitList" runat="server"></asp:DropDownList>

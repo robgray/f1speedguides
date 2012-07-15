@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
+<asp:Content ID="ContentTitle" ContentPlaceHolderId="breadcrumb" runat="server">
+  <div class="grid_9 alpha nogap">
+    <umbraco:Macro Alias="Breadcrumb" runat="server"></umbraco:Macro>
+  </div>
+  <div class="grid_2 omega nogap" style="padding-top: 5px;">
+    <umbraco:Macro Alias="SocialSharing" runat="server"></umbraco:Macro>
+  </div>        
+  <div class="clear"></div>
+</asp:Content>
+  
+<asp:Content ID="Content1" ContentPlaceHolderID="cp_content" runat="server">
+  <div class="fr" style="margin-left: 25px;">    
+    <umbraco:Macro Alias="F1CircuitDetail" runat="server"></umbraco:Macro>    
+    <div class="Pod">      
+      <h2>Car Setups</h2>      
+      <hr />
+      <umbraco:Macro Alias="F1CarSetups" runat="server"></umbraco:Macro>    
+    </div>
+  </div>
+  <div id="content" class="textpage">              
+    <umbraco:Item ID="Item2" runat="server" field="bodyText" />
+    <div class="grid_11 alpha">
+      <umbraco:Macro Alias="SocialBookmarking" runat="server" />
+    </div>
+    <div class="grid_11 alpha CommentContainer">
+      <h2>Comments</h2>
+      <hr />
+    </div>
+    <div class="grid_8 alpha CommentContainer">       
+      <umbraco:Macro Alias="UCommentListComments" runat="server"></umbraco:Macro>
+      <umbraco:Macro RegisterScripts="0" Alias="UCommentForm" runat="server"></umbraco:Macro>  
+    </div>
+  </div>
+</asp:Content>

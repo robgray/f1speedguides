@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cp_content" runat="server">
+<div id="content" class="textpage">  
+ <div class="clearfix">
+   <p><img style="float: left; margin: 0 20px 20px 0;" src="/media/6541/Gnome-Help-Faq-64.png" alt="Gnome-Help-Faq-64.png" width="64" height="64" />
+     Click on the desired race link below to view races and qualifying results fro the round, race reports, and watch highlights videos.<br/>
+     Alternatively you can use thed detailed results table below to see how your driver fared during the season.</p>   
+  </div>
+  
+  <div class="HorizontalNav">     
+   <umbraco:Macro ID="Macro1" Alias="umb2ndLevelNavigation" runat="server"></umbraco:Macro>
+    <div class="clear"></div>
+ </div>
+
+ <umbraco:Item ID="Item2" runat="server" field="bodyText" />
+ 
+ <h3>Drivers Championship</h3>
+ <umbraco:Macro SeasonId="[#season]" Alias="F1DetailedChampionship" runat="server"></umbraco:Macro>   
+  
+ <h3>Qualifying Results</h3>
+ <umbraco:Macro SeasonId="[#season]" Alias="F1DetailedQualifying" runat="server"></umbraco:Macro>   
+ 
+  <h3>Constructors Championship</h3>
+ <umbraco:Macro SeasonId="[#season]" Alias="F1DetailedTeamChampionship" runat="server"></umbraco:Macro>   
+   
+</div>
+</asp:Content>

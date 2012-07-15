@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xsl:stylesheet [ <!ENTITY nbsp "&#x00A0;"> ]>
+<xsl:stylesheet 
+  version="1.0" 
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+  xmlns:msxml="urn:schemas-microsoft-com:xslt" 
+  xmlns:umbraco.library="urn:umbraco.library" xmlns:Exslt.ExsltCommon="urn:Exslt.ExsltCommon" xmlns:Exslt.ExsltDatesAndTimes="urn:Exslt.ExsltDatesAndTimes" xmlns:Exslt.ExsltMath="urn:Exslt.ExsltMath" xmlns:Exslt.ExsltRegularExpressions="urn:Exslt.ExsltRegularExpressions" xmlns:Exslt.ExsltStrings="urn:Exslt.ExsltStrings" xmlns:Exslt.ExsltSets="urn:Exslt.ExsltSets" xmlns:tagsLib="urn:tagsLib" xmlns:BlogLibrary="urn:BlogLibrary" xmlns:uTube.XSLT="urn:uTube.XSLT" xmlns:UCommentLibrary="urn:UCommentLibrary" 
+  exclude-result-prefixes="msxml umbraco.library Exslt.ExsltCommon Exslt.ExsltDatesAndTimes Exslt.ExsltMath Exslt.ExsltRegularExpressions Exslt.ExsltStrings Exslt.ExsltSets tagsLib BlogLibrary uTube.XSLT UCommentLibrary ">
+
+<xsl:output method="xml" omit-xml-declaration="yes"/>
+
+<xsl:param name="currentPage"/>
+
+<xsl:template match="/">
+<!-- The fun starts here -->
+  <xsl:if test="count($currentPage/Video) &gt; 1">
+    <h3>Extra Footage</h3>
+  </xsl:if>
+<ul>
+<xsl:for-each select="$currentPage/Video">
+  <xsl:sort select="@sortOrder" />
+  <xsl:if test="position() &gt; 1">
+  <li>
+    <a href="{umbraco.library:NiceUrl(@id)}">
+      <xsl:value-of select="@nodeName"/>
+    </a>
+  </li>
+  </xsl:if>
+</xsl:for-each>
+</ul>  
+</xsl:template>
+
+</xsl:stylesheet>

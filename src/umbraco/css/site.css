@@ -1,0 +1,68 @@
+html, body {
+  min-height: 100%;
+  height: 100% !important;
+  margin-bottom: 120px;
+  font-family: 'Actor', Arial, sans-serif;
+}
+.container
+{
+  background: #000000;  
+  min-height: 100%;
+  height: 100% !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+}
+
+.menu
+{
+  border: 1px solid #696;
+  padding: 0px 0;
+  height: 35px;
+  text-align: center; 
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: #666 0px 2px 3px;
+  -moz-box-shadow: #666 0px 2px 3px;
+  box-shadow: #666 0px 2px 3px;
+  background: #B6B7B4;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#B6B7B4), to(#597A4D));
+  background: -moz-linear-gradient(#B6B7B4, #597A4D);
+  background: linear-gradient(#B6B7B4, #597A4D);
+  -pie-background: linear-gradient(#B6B7B4, #597A4D);
+  behavior: url(/res/PIE.htc);
+  color: #000000;
+}
+
+#content
+{
+  background: #E0E0E0;
+  border-radius: 8px;
+  behavior: url(/res/PIE.htc);
+  height: 100%;
+}
+
+.menu ul { margin:0; padding: 0; list-style: none; height: 20px; position: relative; }
+
+.menu ul li
+{
+  float: left;
+  padding: 0;
+  padding: 10px 20px 2px 20px;
+  margin: 0;
+}
+
+.menu a, .menu a:hover {
+  text-decoration: none;
+  padding: 0;
+  display: block;
+  color: #333333;
+}
+
+.menu a:hover {
+  border-bottom: 3px solid green;
+}
+
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

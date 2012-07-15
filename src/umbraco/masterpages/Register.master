@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
+
+<asp:content ContentPlaceHolderId="cp_head" runat="server">
+  
+</asp:content>
+
+<asp:content ContentPlaceHolderId="cp_top" runat="server">
+  
+</asp:content>
+
+<asp:content ContentPlaceHolderId="breadcrumb" runat="server">
+  
+</asp:content>
+
+<asp:content ContentPlaceHolderId="cp_title" runat="server">
+  
+</asp:content>
+
+<asp:content ContentPlaceHolderId="cp_content" runat="server">
+    <div class="Register">
+        <asp:createuserwizard runat="server" ID="CreateUser" CreateUserButtonType="Link">
+            <CreateUserButtonStyle CssClass="button" />
+            <WizardSteps>
+                <asp:CreateUserWizardStep runat="server">
+                    <ContentTemplate>
+                        <h3>Sign Up for Your New Account</h3>
+                        <table>                            
+                            <tr>
+                                <td>
+                                    <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">User Name</asp:Label>                                
+                                    <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="UserNameRequired" runat="server"
+                                        ControlToValidate="UserName" ErrorMessage="User Name is required."
+                                        ToolTip="User Name is required." ValidationGroup="CreateUser">*</asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Password</asp:Label>                                
+                                    <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="PasswordRequired" runat="server"
+                                        ControlToValidate="Password" ErrorMessage="Password is required."
+                                        ToolTip="Password is required." ValidationGroup="CreateUser">*</asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="ConfirmPasswordLabel" runat="server"
+                                        AssociatedControlID="ConfirmPassword">Confirm Password</asp:Label>                               
+                                    <asp:TextBox ID="ConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="ConfirmPasswordRequired" runat="server"
+                                        ControlToValidate="ConfirmPassword"
+                                        ErrorMessage="Confirm Password is required."
+                                        ToolTip="Confirm Password is required." ValidationGroup="CreateUser">*</asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td >
+                                    <asp:Label ID="EmailLabel" runat="server" AssociatedControlID="Email">E-mail</asp:Label>                                
+                                    <asp:TextBox ID="Email" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="EmailRequired" runat="server"
+                                        ControlToValidate="Email" ErrorMessage="E-mail is required."
+                                        ToolTip="E-mail is required." ValidationGroup="CreateUser">*</asp:RequiredFieldValidator>
+                                </td>
+                            </tr>                           
+                            <tr>
+                                <td align="center">
+                                    <asp:CompareValidator ID="PasswordCompare" runat="server"
+                                        ControlToCompare="Password" ControlToValidate="ConfirmPassword"
+                                        Display="Dynamic"
+                                        ErrorMessage="The Password and Confirmation Password must match."
+                                        ValidationGroup="CreateUser"></asp:CompareValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:ValidationSummary runat="server" ValidationGroup="CreateUser"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="color:Red;">
+                                    <asp:Literal ID="ErrorMessage" runat="server" EnableViewState="False"></asp:Literal>
+                                </td>
+                            </tr>
+                        </table>
+                    </ContentTemplate>
+                </asp:CreateUserWizardStep>
+                <asp:CompleteWizardStep runat="server">
+                    <ContentTemplate>
+                        <div class="CreatedAccountSuccess">User Created!</div>
+                        <div class="CreatedAccount">Your account has been successfully created.<br /><br /><br />PM kikz with your username so he can connect it to your Driver record.</div>                        
+                    </ContentTemplate>
+                </asp:CompleteWizardStep>
+            </WizardSteps>             
+        </asp:createuserwizard>
+    </div>
+</asp:content>

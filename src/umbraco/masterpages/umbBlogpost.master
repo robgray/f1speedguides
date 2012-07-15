@@ -1,0 +1,59 @@
+﻿<%@ master language="C#" MasterPageFile="~/masterpages/SiteMaster.master" autoeventwireup="true" %>
+<script runat="server">
+  bool closeComments = false;
+  
+  void Page_Load(object sender, System.EventArgs ea) {
+    try{    
+      if(umbraco.presentation.nodeFactory.Node.GetCurrent().GetProperty("closeComments").Value == "1")
+        closeComments = true;
+    }
+    catch(System.NullReferenceException){}  
+  }
+</script>
+  
+<asp:Content ID="ContentTitle" ContentPlaceHolderId="breadcrumb" runat="server">
+  <div class="grid_9 alpha nogap">
+    <umbraco:Macro Alias="Breadcrumb" runat="server"></umbraco:Macro>
+  </div>
+  <div class="grid_2 omega nogap" style="padding-top: 5px;">
+    <umbraco:Macro Alias="SocialSharing" runat="server"></umbraco:Macro>
+  </div>        
+  <div class="clear"></div>
+</asp:Content>
+   
+<asp:content contentplaceholderid="cp_content" runat="server">
+<div class="fullpage">  
+  <div class="entry-meta grid_9 alpha">
+    Posted on <abbr class="published" title='<umbraco:Item ID="Item1" field="PostDate" formatAsDate="true" runat="server"/>'><umbraco:Item field="PostDate" formatAsDate="true" runat="server"/></abbr>
+  </div>    
+  <div id="content" class="grid_11 alpha nogap">  
+    <div class="hentry p1 post publish">      
+      <div class="grid_11 alpha entry-content">   
+        <umbraco:Item field="content" runat="server"></umbraco:Item>        
+        <br/><br/>
+        <umbraco:Macro Alias="F1RaceVideoList" runat="server"></umbraco:Macro>
+      </div>
+      <div class="grid_11 alpha">
+        <umbraco:Macro Alias="SocialBookmarking" runat="server" />
+      </div>
+    </div>
+  
+    <div id="related">
+      <umbraco:Macro Alias="BlogpostRelatedPages" runat="server"></umbraco:Macro>
+    </div>    
+    
+    <div class="grid_11 alpha">  
+      <div class="Pod">
+          <h2>Comments</h2>
+          <hr />
+          <umbraco:Macro Alias="UCommentListComments" runat="server"></umbraco:Macro>
+          <% if (!closeComments) { %>
+            <umbraco:Macro RegisterScripts="False" Alias="UCommentForm" runat="server"></umbraco:Macro> 
+            <% } else { %>
+              <div id="commentPosted" style=""> Comments are closed </div>
+            <% } %>
+        </div>
+    </div>
+  </div>
+</div>
+</asp:content>

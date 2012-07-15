@@ -1,0 +1,21 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
+
+<asp:content ContentPlaceHolderId="cp_title" runat="server"> 
+</asp:content>
+  
+<asp:content ContentPlaceHolderId="breadcrumb" runat="server">
+  <umbraco:Macro Alias="Breadcrumb" runat="server"></umbraco:Macro>
+  <div class="clear"></div>
+  <asp:contentplaceholder Id="breadcrumb" runat="server">
+  </asp:contentplaceholder>
+</asp:content>
+  
+<asp:content ContentPlaceHolderId="cp_content" runat="server">
+
+    <asp:contentplaceholder id="cp_title" runat="server">
+      
+    </asp:contentplaceholder>  
+    <asp:contentplaceholder id="cp_content" runat="server"></asp:contentplaceholder>    
+     
+  <div class="clear"></div>
+</asp:content> 

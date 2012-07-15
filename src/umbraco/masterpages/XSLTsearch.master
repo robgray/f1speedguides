@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
+
+<asp:Content ContentPlaceHolderId="cp_title" runat="server">                
+         
+</asp:Content>
+  
+<asp:Content ContentPlaceHolderId="cp_content" runat="server">
+   
+    <umbraco:Macro runat="server" Alias="XSLTsearch"
+      macroAlias="XSLTsearch"
+      source="-1"
+      searchFields="@nodeName,metaKeywords,metaDescription,team,driver,circuit,bodyText"
+      previewFields="bodyText,metaDescription"
+      previewType="beginning"
+      searchBoxLocation="TOP"
+      resultsPerPage="10"
+      previewChars="255"
+      showPageRange="1"
+      showOrdinals="0"
+      showScores="0"
+      showStats="1">
+    </umbraco:Macro>
+
+</asp:Content>

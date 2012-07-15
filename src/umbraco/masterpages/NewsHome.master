@@ -1,0 +1,7 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SidebarMaster.master" AutoEventWireup="true" %>
+
+<asp:content contentplaceholderid="cp_content" runat="server">      
+  <div style="margin-top: 10px;">
+  <umbraco:Macro Alias="F1ListNewsItems" runat="server" numberOfPosts="0"></umbraco:Macro>
+  </div>
+</asp:content>

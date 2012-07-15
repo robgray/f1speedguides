@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
+<asp:Content ID="ContentTitle" ContentPlaceHolderId="breadcrumb" runat="server">
+  <div class="grid_9 alpha nogap">
+    <umbraco:Macro Alias="Breadcrumb" runat="server"></umbraco:Macro>
+  </div>
+  <div class="grid_2 omega nogap" style="padding-top: 5px;">
+    <umbraco:Macro Alias="SocialSharing" runat="server"></umbraco:Macro>
+  </div>        
+  <div class="clear"></div>
+</asp:Content>
+  
+<asp:content ContentPlaceHolderId="cp_content" runat="server">
+  <div class="grid_4">
+    
+  </div>
+  <div class="InfoPod grid_6 push_2">All setups are developed with all drivers aids disabled.  That means no ABS, Traction Control, Steering Help, etc.</div>
+  <style type="text/css">
+    table { width: 100%; }
+    table th { width: 200px; }
+    table th.section { background-color: #858585; }
+    table td { text-align: center; width: 60px; }    
+    table td, table th { border: 1px solid #d5d5d5; padding: 5px; } 
+    </style>    
+<div class="PodBorder push_1 grid_9"><div class="Pod">      
+    <table>
+      <tr><th colspan="2" class="section">Aerodynamics</th><th colspan="2" class="section">Brakes</th></tr>
+      <tr>
+        <th>Front Wing Angle</th><td><umbraco:Item field="frontWingAngle" runat="server"></umbraco:Item></td>
+        <th>Brake Balance (F:R)</th><td><umbraco:Item field="brakeBalanceFront" runat="server"></umbraco:Item>% : <umbraco:Item field="brakeBalanceRear" runat="server"></umbraco:Item>%</td>
+      </tr>
+      <tr>
+        <th>Rear Wing Angle</th><td><umbraco:Item field="rearWingAngle" runat="server"></umbraco:Item></td>
+        <th>Brake Pressure</th><td><umbraco:Item field="brakingPressure" runat="server"></umbraco:Item></td>
+      </tr>    
+      <tr>
+        <th></th><td></td>
+        <th>Brake Size</th><td><umbraco:Item field="brakeSize" runat="server"></umbraco:Item></td>
+      </tr>
+    </table>
+    <br/>    
+    <table>
+     <tr><th colspan="2" class="section">Balance</th><th colspan="2" class="section">Suspension</th></tr>
+    <tr>     
+      <th>Front Antiroll Bar</th><td><umbraco:Item field="frontAntiRollBar" runat="server"></umbraco:Item></td>
+      <th>Front Ride Height</th><td><umbraco:Item field="frontRideHeight" runat="server"></umbraco:Item></td>      
+    </tr> 
+    <tr>
+      <th>Rear Anitroll Bar</th><td><umbraco:Item field="rearAntiRollBar" runat="server"></umbraco:Item></td>
+      <th>Rear Ride Height</th><td><umbraco:Item field="rearRideHeight" runat="server"></umbraco:Item></td>
+    </tr>
+    <tr>
+      <th></th><td></td><th>Front Springs</th><td><umbraco:Item field="frontSpringStiffness" runat="server"></umbraco:Item></td>
+    </tr>
+    <tr>            
+      <th></th><td></td><th>Rear Springs</th><td><umbraco:Item field="rearSpringStiffness" runat="server"></umbraco:Item></td>
+    </tr>         
+    </table>
+    <br/>                 
+    <table>
+      <tr><th colspan="2" class="section">Gearbox</th><th colspan="2" class="section">Alignment</th></tr>
+      <tr>
+        <th>Gear 1</th><td><umbraco:Item field="gear1" runat="server"></umbraco:Item> kph</td>
+        <th>Camber Front</th><td><umbraco:Item field="camberFront" runat="server"></umbraco:Item></td>
+      </tr>
+      <tr>
+        <th>Gear 2</th><td><umbraco:Item field="gear2" runat="server"></umbraco:Item> kph</td>
+        <th>Camber Rear</th><td><umbraco:Item field="camberRear" runat="server"></umbraco:Item></td>
+      </tr>
+      <tr>
+        <th>Gear 3</th><td><umbraco:Item field="gear3" runat="server"></umbraco:Item> kph</td>
+        <th>Toe Front</th><td><umbraco:Item field="toeFront" runat="server"></umbraco:Item></td>
+      </tr>
+      <tr>
+        <th>Gear 4</th><td><umbraco:Item field="gear4" runat="server"></umbraco:Item> kph</td>
+        <th>Toe Rear</th><td><umbraco:Item field="toeRear" runat="server"></umbraco:Item></td>
+      </tr>
+      <tr>
+        <th>Gear 5</th><td><umbraco:Item field="gear5" runat="server"></umbraco:Item> kph</td>
+        
+      </tr>
+      <tr>
+        <th>Gear 6</th><td><umbraco:Item field="gear6" runat="server"></umbraco:Item> kph</td>
+        
+      </tr>
+      <tr>
+        <th>Gear 7</th><td><umbraco:Item field="gear7" runat="server"></umbraco:Item> kph</td>
+        
+      </tr>    
+    </table>
+  </div></div>      
+</asp:content>

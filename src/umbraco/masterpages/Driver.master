@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
+<asp:Content ID="ContentTitle" ContentPlaceHolderId="breadcrumb" runat="server">
+  <div class="grid_9 alpha nogap">
+    <umbraco:Macro Alias="Breadcrumb" runat="server"></umbraco:Macro>
+  </div>
+  <div class="grid_2 omega nogap" style="padding-top: 5px;">
+    <umbraco:Macro Alias="SocialSharing" runat="server"></umbraco:Macro>
+    </div>        
+  <div class="clear"></div>
+</asp:Content>
+  
+<asp:Content ID="Content1" ContentPlaceHolderID="cp_content" runat="server">    
+  <div class="grid_3 alpha">      
+    <div class="Pod">
+      <umbraco:Macro DriverId="[#driverId]" Alias="F1DriverDetail" runat="server"></umbraco:Macro>            
+    </div>   
+    
+    <div class="Pod">
+      <umbraco:Macro DriverId="[#driverId]" Alias="F1Achievements" runat="server"></umbraco:Macro>
+      <div class="clear"></div>
+    </div>        
+  </div>      
+  <div class="grid_8 omega" style="position:relative;min-height: 220px;">
+      <h2>Summary</h2>
+    <table width="470px">
+        <colgroup>
+          <th width="100px"></th>
+          <td style="padding-bottom: 4px;"></td>
+        <colgroup> 
+        <tr>
+          <th>Speed</th>
+          <td><umbraco:Macro rating="[#speedRating]" Alias="StarRating" runat="server"></umbraco:Macro></td>                    
+        </tr>
+        <tr>
+          <th>Racecraft</th>
+          <td><umbraco:Macro rating="[#racecraftRating]" Alias="StarRating" runat="server"></umbraco:Macro></td>                    
+        </tr>
+          <tr>
+          <th>Most Like</th>
+          <td><umbraco:Item runat="server" field="f1GaurdianAngel" /></td>          
+        </tr>
+        <tr>
+          <th></th>
+          <td>
+            <br/>
+            <umbraco:Item runat="server" field="summary" />
+          </td>          
+        </tr>        
+      </table>   
+          <div style="position:absolute; right:0; top: 40px; padding: 3px; border: 1px solid #ccc;">
+        <div style="position:relative;">
+          <umbraco:Macro Alias="AtomicFlair" runat="server"></umbraco:Macro>            
+        </div>
+        <div style="margin-top: 3px;">
+          <umbraco:Macro Alias="XBoxLiveBadge" runat="server"></umbraco:Macro>
+        </div>
+      </div>
+    </div>    
+    <div class="grid_8 omega">      
+      <h2>About</h2>
+      <umbraco:Item ID="Item2" runat="server" field="bodyText" />            
+    </div>
+   <div id="DriverSupplementary" class="grid_8 omega">
+     <h2>Background Information</h2> 
+     <table width="100%">        
+        <colgroup>
+          <th width="100px"></th>
+          <td></td>
+        </colgroup>
+        <tr>
+          <th>Controller</th>
+          <td><umbraco:Item field="controllerMethod" runat="server"></umbraco:Item></td>
+        </tr>
+        <tr>
+          <th>Racing View</th>
+          <td><umbraco:Item field="racingView" runat="server"></umbraco:Item></td>
+        </tr>
+        <tr>
+          <th>Favourite Tracks</th>
+          <td><umbraco:Item field="favouriteTracks" runat="server"></umbraco:Item></td>
+        </tr>          
+        <tr>
+          <th>Disliked Tracks</th>
+          <td><umbraco:Item field="dislikedTracks" runat="server"></umbraco:Item></td>
+        </tr>
+        <tr>
+          <th>PC Spec</th>
+          <td><umbraco:Item field="pCSpec" convertLineBreaks="true" runat="server"></umbraco:Item></td>
+        </tr>
+      </table>
+    </div>   
+  <div class="grid_8 omega">
+    <umbraco:Macro Alias="SocialBookmarking" runat="server" />      
+  </div>
+  
+</asp:Content>

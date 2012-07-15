@@ -1,0 +1,13 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cp_content" runat="server">
+<div id="content" class="textpage">  
+ 
+  <div class="grid_3 alpha reset">
+      <umbraco:Macro ID="Macro1" Alias="umb2ndLevelNavigation" runat="server"></umbraco:Macro>
+  </div>
+  <div class="grid_8 omega">
+      <umbraco:Item ID="Item2" runat="server" field="bodyText" />                         
+  </div>
+</div>
+</asp:Content>

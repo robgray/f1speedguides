@@ -1,0 +1,110 @@
+html, body, form
+{    
+  height: 100%;
+  margin:0;
+  padding: 0;
+  background-attachment: fixed;
+  background-clip: border-box;
+  background-color: #E0DED7;
+  background-image: -moz-linear-gradient(center top , rgba(38, 38, 38, 0.5) 0%, rgba(38, 38, 38, 0.5) 17%, rgba(38, 38, 38, 0) 100%);
+  background-origin: padding-box;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  background-size: auto 450px;
+}
+
+#pagecontainer
+{
+    min-height: 100%;    
+    position:relative;    
+}
+
+#Main
+{                
+    padding-bottom: 230px;
+}
+
+#body 
+{
+    padding-top: 10px;
+    padding-bottom: 290px; 
+}
+
+#footer   
+{
+  position: absolute;  
+  bottom: 0;
+  width:100%;  
+  height: 220px;  
+  clear:both;   
+  padding:5px 0px 5px 0px;  
+  color: #808080; 
+}
+
+#footer .list 
+{
+    float: left;
+    margin: 30px;
+    width: 270px;
+}
+
+#footer .list.center { margin-left: 10px; width: 290px; }
+#footer .list ul { margin-top: 8px; }
+#footer a { color: #fff; font-weight: normal; }
+#footer h5 { font-weight: bold; color: #fff; }
+
+#innerfooter { position: relative; }
+
+#footer .perm  { position: absolute; bottom: 0px; width: 990px; height: 50px; }
+
+#footer .perm .list { margin-top: 10px; margin-bottom: 0; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

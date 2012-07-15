@@ -1,0 +1,23 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
+  
+<asp:content contentplaceholderid="cp_title" runat="server">
+</asp:content>
+  
+<asp:content ContentPlaceHolderId="breadcrumb" runat="server">
+  <div class="nocrumbs"></div>
+</asp:content>
+  
+<asp:content contentplaceholderid="cp_content" runat="server">            
+  <div class="grid_4">
+    <umbraco:Macro Alias="FrontPageNews" runat="server" numberOfPosts="8"></umbraco:Macro>    
+  </div>
+  <div class="grid_7 alpha omega">
+    <umbraco:Macro Alias="FeatureSlider" runat="server"></umbraco:Macro>     
+    <div style="border-left: 1px solid #ccc; padding-left: 15px;">
+      <h2>Guides</h2>
+      <umbraco:Macro showTeaser="1" numberOfGuides="6" Alias="GuidesList" runat="server"></umbraco:Macro>    
+    </div>
+    <umbraco:Macro Alias="F1DriverStandings" runat="server"></umbraco:Macro>
+    <umbraco:Macro Alias="F1TeamStandings" runat="server"></umbraco:Macro>
+  </div>
+</asp:content>

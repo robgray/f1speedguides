@@ -1,0 +1,277 @@
+/* Progressive stylesheet, What should we do if we have a bunch more screen real-estate to play with? run away and hide? */
+
+
+/* css properties are grouped in the following order: font/type, display/margin/padding, position, width/height, border, backgrounds etc.
+new lines for these different property groups */
+
+
+#siteName
+{
+       font-size: 2.3em;
+       width:auto;
+       line-height:inherit;
+       white-space:nowrap;
+        
+}
+
+#top:before
+{
+        content:"";
+        clear:both;
+        position:absolute;
+        display:block;
+        top:69px;
+        height:0px;
+        width:100%;
+        border-width:40px !important;
+}
+
+#body{
+      padding-bottom:90px;
+}
+#comments, #tagcloud, #sidebar
+{
+       float:right;
+       position:relative;
+       width:25.5%;
+       border-left:1px dotted #ccc;
+}
+
+#siteDescription
+{
+        margin: 27px 15px 0 15px;
+        padding: 0 0 0 13px;
+        border:0;
+        border-left: 1px solid rgba(255,255,255,0.2);  
+        border-bottom:0 !important;
+        width:auto;
+}
+
+#subNavigation
+{
+        text-align: right;
+        margin-top: 28px;
+        padding-bottom:0px;
+        line-height:normal;
+  
+}
+
+
+#subNavigation li
+{
+        margin:0;
+        border:0;
+}
+
+#subNavigation li a
+{
+        margin: 0 8px;  
+}
+
+
+.post, .bodyText
+{
+        width:100%;
+        float:left;
+       
+}
+
+.bodyText .post{
+      width:100%;
+}
+
+#content.textpage:after, #content.frontPage:after{
+      content:".";
+      clear:both;
+      display:block;
+      visibility:hidden;
+}
+span.blog
+{
+        display:block;
+        left:-15px;
+        position:absolute;
+        top:12px; left:-15px;
+        width:24px;
+        height:24px;
+        background: url("/css/feijoa/tinyarrow.png") no-repeat scroll 8px 6px #FFFFFF;
+        border-radius:24px;
+        -moz-border-radius:24px;
+        -webkit-border-radius:24px;
+        box-shadow:1px 1px 3px #CCCCCC;
+        -moz-box-shadow:1px 1px 3px #CCCCCC;
+        -webkit-box-shadow:1px 1px 3px #CCCCCC;
+}
+
+
+
+#body .post h2
+{
+        padding-right:0;
+        letter-spacing:-0.5px;
+}
+
+
+.post img
+{
+        margin:1px 0 10px 6px;
+}
+
+.column{
+                width:49%;
+                margin-right:0.5%;
+                float:left;
+        }
+
+.entry-content h3{
+                clear:both; padding-top:26px;
+        }
+
+
+.image-text{
+                font-family:'Museo300',arial,serif;
+                font-size:1.3em;
+                width:200px;
+                margin:20px 20px 0 0;
+        }
+
+h3.headline, .summaryList h4, .feedList h4 {
+    font-size: 1.1em;
+}
+
+}
+.bodyText p, .frontPage p{
+    font-size:0.9em;
+}
+
+
+/* business */
+.summaryList, .feedList{
+width:46%; 
+}
+#body .summaryList p, #body .feedlist p{
+margin-top:0;
+  font-size:0.8em;
+}
+.feedList{
+width:46%; 
+
+}
+#newsSummary{
+ float:right; 
+  margin-top:14px;
+}
+
+.feedList, #blogSummary{
+border-right:1px solid #ccc;
+padding-right:40px;
+}
+#content.frontPage p + p + p + h3{
+display:none;
+}
+#newsSummary + h3{
+width:100%;
+}
+#blogSummary + h3{
+width:100%;
+}
+@media (min-width: 1300px)
+{
+        .top, #body, .footer
+        {
+                width: 1180px;
+        }
+
+        .image-text{
+                font-family:'Museo300',arial,serif;
+                font-size:1.7em;
+                width:320px;
+                margin:30px 40px 0 0;
+        }
+
+        .column{
+                width:49%;
+                margin-right:0.5%;
+                float:left;
+        }
+        .entry-content h3{
+                clear:both; padding-top:26px;
+        }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

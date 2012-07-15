@@ -1,0 +1,62 @@
+#commentform input[type=text], #commentform textarea { padding: 3px;}
+#commentform textarea { width:600px; }
+#commentform input[type=text] { width: 350px; }
+#commentform { margin-top: 10px; padding: 10px; border-top: 1px dotted #808080; }
+
+ol.commentlist li.comment { padding-left: 0px; margin-left: 0px; position: relative; padding-bottom: 20px; list-style: none; }
+ol.commentlist li.comment .comment-meta { position:absolute; right:0px; top: 3px; }
+ol.commentlist .comment-author img { float: left;  margin: 0 20px 20px; border: none;}
+    
+#commentform .form-submit input { margin-top: 10px; }
+
+ol.commentlist li.comment .comment-author .fn { display: block; border-bottom: 1px solid #ccc; margin-left: 75px; margin-right: 40px; }
+
+
+ol.commentlist
+{
+  margin-left: -20px;
+  margin-top: 20px;
+}
+
+ol.commentlist div.comment-meta
+{
+   color: #888;
+   font-size: 0.8em;
+  margin-right: 40px;
+}
+
+ol.commentlist li.comment p { margin-top: 10px; margin-left: 75px; margin-right: 20px; }
+
+#commentform input[type=submit]
+{
+  background-color: #C40034;
+  display: inline-block;
+  margin: 25px 0px 10px 0px;
+  line-height: 25px;
+  padding: 0 20px;
+  border: 0;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;    
+  color: #fff;
+}
+
+#commentform input[type=submit]:hover {
+  text-decoration: none;
+  background-color: #888888;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

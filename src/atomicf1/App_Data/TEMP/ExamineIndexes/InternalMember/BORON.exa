@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-16"?>
+<dictionary>
+  <item>
+    <key>
+      <EXAFields>Name</EXAFields>
+    </key>
+    <value><![CDATA[BORON]]></value>
+  </item>
+  <item>
+    <key>
+      <EXAFields>Created</EXAFields>
+    </key>
+    <value><![CDATA[2011-04-26 11:01:23.385]]></value>
+  </item>
+  <item>
+    <key>
+      <EXAFields>Updated</EXAFields>
+    </key>
+    <value><![CDATA[2011-06-14 17:48:34.932]]></value>
+  </item>
+  <item>
+    <key>
+      <EXAFields>IsMaster</EXAFields>
+    </key>
+    <value><![CDATA[True]]></value>
+  </item>
+</dictionary>

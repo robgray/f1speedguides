@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="atomicf1.domain.Driver">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAEAAAAAAQAAAAAAAgAAAAAAAAACAA=</HashCode>
+      <FileName>Driver.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CurrentTeam" />
+      <Property Name="Statistics" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="atomicf1.domain.Team">
+    <Position X="7.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAgAAAAAAAEAAAAAAQAAACAAAgAAAAAACAAAAA=</HashCode>
+      <FileName>Team.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Statistics" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Drivers" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="atomicf1.domain.Circuit">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAQAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Circuit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="atomicf1.domain.Race">
+    <Position X="9.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAQAAACEAAAAkAAAgAAAEAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Race.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Circuit" />
+      <Property Name="Season" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Entries" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="atomicf1.domain.Season">
+    <Position X="5.5" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAACAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Season.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ChampionshipResults" />
+      <Property Name="Races" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="atomicf1.domain.DriverContract">
+    <Position X="4.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACEAAAAAAAAAAAgACAEAAAAAAAAAA=</HashCode>
+      <FileName>DriverContract.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Driver" />
+      <Property Name="Team" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="atomicf1.domain.RaceEntry">
+    <Position X="12" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAQAAAACQQAAgAAAAAAAAAAAAAAAgABAQAEAAAAAAAA=</HashCode>
+      <FileName>RaceEntry.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Race" />
+      <Property Name="Driver" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="atomicf1.domain.ChampionshipResult">
+    <Position X="5" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ChampionshipResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="atomicf1.domain.Statistics">
+    <Position X="10.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAgAhAAAQAAAAAAAAAAAAgAAAAAgAAAAA=</HashCode>
+      <FileName>Statistics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="atomicf1.domain.Result">
+    <Position X="2.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Result.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Driver" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="atomicf1.domain.RaceResult">
+    <Position X="2.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACQAAAgAAAgAAAAAABAAAAgAAAAAEAAAAAAAA=</HashCode>
+      <FileName>RaceResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="atomicf1.domain.QualifyingResult">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAABAACAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>QualifyingResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="atomicf1.domain.IRaceResult" Collapsed="true">
+    <Position X="1.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAEAAAAAAAA=</HashCode>
+      <FileName>IRaceResult.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

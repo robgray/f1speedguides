@@ -1,0 +1,61 @@
+#xsltsearch {margin: 0; padding-bottom: 20px;}
+#xsltsearch_navigation {text-align: center;}
+#xsltsearch_navigation .disabled {color: #AAA;}
+#xsltsearch_stats {font-size: 75%; color: #999;}
+#xsltsearch_results {padding-bottom: 20px;}
+#xsltsearch h2 {font-size: 150%;}
+.xsltsearch_result p {margin: 0; padding: 0;}
+.xsltsearch_result,.xsltsearch_result:hover { margin-bottom: 10px; width: 600px; }
+.xsltsearch_result:hover {background: #E4FFD1;}
+.xsltsearch_ordinal {font-weight: bold; font-size: 75%;}
+.xsltsearch_title {font-weight: bold;}
+.xsltsearch_url { font-size: 0.75em; }
+.xsltsearch_score {font-size: 75%;}
+p.xsltsearch_result_description {padding-bottom: 10px;}
+.xsltsearch_description strong {background: #FFD;} /* highlighting */
+
+.SearchBorder  
+{   
+  margin: auto;
+  margin-top: 30px;     
+  width: 450px;
+}
+
+.Search input[type=submit]
+{
+    border: none;          
+    margin: 3px 0 0 -1px;
+    width: 65px;
+    height: 26px;
+    border-radius: 0 15px 15px 0;
+    -moz-border-radius: 0 15px 15px 0;
+    -webkit-border-radius: 0 15px 15px 0;
+    padding: 0;
+    background-color: #ccc;
+}
+
+.Search input[type=submit]:hover
+{    
+    background-color: #ddd;
+    height: 26px;    
+}
+
+
+.Search input[type=text]
+{
+  height: 25px;
+  padding-left: 20px;
+  width: 350px;
+  background: url("/css/atomicf1/searchsmall.png") no-repeat scroll 3px center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  
+}
+
+
+
+
+
+
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

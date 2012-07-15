@@ -1,0 +1,102 @@
+/* This is the selector of the ninth box, here's where we establish the measures, background colors, borders and shadows */
+.PodTransparent{
+    margin: 70px 50px;    
+    min-height: 250px;
+    position:relative;
+    border: 1px solid rgba(0,0,0,0.1);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius:4px;
+    background: white;
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+    box-shadow:0px 0px 5px rgba(0,0,0,0.3);
+}
+ 
+/* This is the border that envelops the box */
+.PodTransparent:before{
+    content: '';
+    width: 110%;
+    left: 0;
+    height: 111%;
+    z-index:-1;
+    position:absolute;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius:20px;
+    border: 1px solid rgba(0,0,0, 0.1);
+    background: rgba(0, 0, 0, 0.0);
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    -webkit-transform:  translate(-5%,-5%);
+    -moz-transform: translate(-5%, -5%);
+    -o-transform: translate(-5%, -5%);
+    transform: translate(-5%, -5%);
+}
+ 
+/* This is the tape of the top section of the box */
+.PodTransparent:after{
+    content: '';
+    position:absolute;
+    top:-25px; left: 30%;
+    width: 130px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.1);
+    background: -webkit-gradient(linear, 555% 20%, 0% 92%, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.0)), color-stop(.1,rgba(0, 0, 0, 0.2)));
+    background: -moz-linear-gradient(555% 0 180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.0));
+    border-left: 1px dashed rgba(0, 0, 0, 0.1);
+    border-right: 1px dashed rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
+}
+
+.PodBottomShadow
+{ 
+  position: relative;
+  color: #000;
+  padding: 10px;   
+  background-color: #C0C0C0;
+  margin: 10px auto;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;  
+}
+
+
+.PodBottomShadow:before, .PodBottomShadow:after
+  {
+    z-index: -1; 
+    position: absolute; 
+    content: '';
+    bottom: 15px;
+    left: 10px;
+    width: 50%; 
+    top: 80%;
+    max-width:300px;
+    background: rgba(0, 0, 0, 0.7); 
+    -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7);   
+    -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform: rotate(-3deg);    
+    -moz-transform: rotate(-3deg);   
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+  }
+
+.PodBottomShadow:after
+  {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
+  }
+
+
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

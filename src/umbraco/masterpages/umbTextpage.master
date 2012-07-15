@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
+<asp:Content ID="ContentTitle" ContentPlaceHolderId="breadcrumb" runat="server">
+  <div class="grid_9 alpha nogap">
+    <umbraco:Macro Alias="Breadcrumb" runat="server"></umbraco:Macro>
+  </div>
+  <div class="grid_2 omega nogap" style="padding-top: 5px;">
+    <umbraco:Macro Alias="SocialSharing" runat="server"></umbraco:Macro>
+  </div>        
+  <div class="clear"></div>
+</asp:Content>
+  
+<asp:Content ID="Content1" ContentPlaceHolderID="cp_content" runat="server">  
+  <div class="grid_11 alpha nogap">
+    <umbraco:Item ID="Item2" runat="server" field="bodyText"  />
+  </div>
+  <div class="grid_11 alpha">
+    <umbraco:Macro Alias="SocialBookmarking" runat="server"></umbraco:Macro> 
+  </div>
+  <div class="grid_11 alpha CommentContainer">  
+    <h2>Comments</h2>
+    <hr />
+    <umbraco:Macro Alias="UCommentListComments" runat="server"></umbraco:Macro>
+    <umbraco:Macro RegisterScripts="0" Alias="UCommentForm" runat="server"></umbraco:Macro>  
+  </div>
+</asp:Content>

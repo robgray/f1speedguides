@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
+<asp:content ContentPlaceHolderId="cp_title" runat="server">  
+  <div id="contentHeader">          
+    <div class="clear"></div>
+    <h2><umbraco:Item ID="PageTitle" runat="server" field="pageName"/></h2>
+  </div> 
+</asp:content>  
+<asp:Content ID="ContentTitle" ContentPlaceHolderId="breadcrumb" runat="server">
+  <div class="grid_9 alpha nogap">
+    <umbraco:Macro Alias="Breadcrumb" runat="server"></umbraco:Macro>
+  </div>
+  <div class="grid_2 omega nogap" style="padding-top: 5px;">
+    <umbraco:Macro Alias="SocialSharing" runat="server"></umbraco:Macro>
+  </div>        
+  <div class="clear"></div>
+</asp:Content>
+ 
+  
+<asp:content ContentPlaceHolderId="cp_content" runat="server">  
+  <div class="grid_11 nogap alpha">    
+    <div class="fr" style="margin-left: 15px; margin-bottom: 15px; margin-top:10px;">
+      <umbraco:Macro RaceId="[#race]" Alias="F1CircuitDetail" runat="server"></umbraco:Macro>    
+    </div>
+    <umbraco:Item field="bodyText" stripParagraph="true" runat="server"></umbraco:Item>    
+  </div>  
+  <div class="grid_11 alpha">
+    <umbraco:Macro Alias="HighlightVideo" runat="server"></umbraco:Macro>
+    <div class="grid_3">
+      <umbraco:Macro Alias="F1RaceVideoList" runat="server"></umbraco:Macro>
+    </div>
+  </div>
+  <div class="grid_11 alpha">
+    <h2>Results</h2>
+    <br/>
+    <umbraco:Macro RaceId="[#race]" Type="Qualifying" Alias="F1InlineRace" runat="server"></umbraco:Macro>
+    <br/>
+    <umbraco:Macro RaceId="[#race]" Type="Race" Alias="F1InlineRace" runat="server"></umbraco:Macro>
+    
+  </div>
+  
+  <div class="grid_11 alpha">
+      <umbraco:Macro Alias="SocialBookmarking" runat="server"></umbraco:Macro>
+    </div>
+  
+  <div class="grid_11 alpha">  
+    <div class="Pod">
+      <h2>Comments</h2>
+      <hr />
+      <umbraco:Macro Alias="UCommentListComments" runat="server"></umbraco:Macro>
+      <umbraco:Macro RegisterScripts="0" Alias="UCommentForm" runat="server"></umbraco:Macro>  
+     </div>
+    </div>
+</asp:content>

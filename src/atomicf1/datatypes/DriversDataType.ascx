@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DriversDataType.ascx.cs" Inherits="atomicf1.datatypes.DriversDataType" %>
+<asp:DropDownList ID="DriverList" runat="server"></asp:DropDownList>

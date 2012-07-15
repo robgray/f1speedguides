@@ -1,0 +1,150 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/umbraco/masterpages/default.master" AutoEventWireup="true" %>
+<%@ Register Namespace="ClientDependency.Core.Controls" Assembly="ClientDependency.Core" TagPrefix="cd" %> 
+
+<asp:content id="Content1" contentplaceholderid="ContentPlaceHolderDefault" runat="server">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">   
+  <head id="head" runat="server">    
+  
+    <meta http-equiv="content-language" content="en" />
+    <meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+    <umbraco:Macro Alias="SEOmeta" runat="server"></umbraco:Macro>  
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />    
+    <umbraco:Macro Alias="FacebookMetadata" runat="server"></umbraco:Macro>  
+    
+    <link rel="shortcut icon" href="/images/favicon1.png" type="image/png" />
+    
+    <cd:ClientDependencyLoader runat="server" id="Loader" />    
+      
+    <cd:CssInclude ID="CssInclude1" runat="server" FilePath="~/css/uTube.chromeless.player.css" Priority="0" />
+    <cd:CssInclude ID="CssInclude2" runat="server" FilePath="~/css/reset.css" Priority="1" />
+    <cd:CssInclude ID="CssInclude3" runat="server" FilePath="~/css/960gs.css" Priority="2"/>
+    <cd:CssInclude ID="CssInclude4" runat="server" FilePath="~/css/atomicf1.css" Priority="3"/>
+    <cd:CssInclude ID="CssInclude5" runat="server" FilePath="~/css/structure.css" Priority="4" />
+    <cd:CssInclude ID="CssInclude6" runat="server" FilePath="~/css/xsltsearch.css" Priority="5"/>
+    <cd:CssInclude ID="CssInclude8" runat="server" FilePath="~/css/ucomment.css" Priority="6" />
+    <cd:CssInclude ID="CssInclude7" runat="server" FilePath="~/css/coin-slider-styles.css" Priority="7" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Actor|Rock+Salt' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Jockey+One|Abel' rel='stylesheet' type='text/css'>
+            
+    <!--[if IE 8]><link rel="stylesheet" href="/css/feijoa-ie8.css" media="screen, projection"><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="/css/feijoa-ie7.css" media="screen, projection"><![endif]-->
+    <!--[if IE 6]>  
+    <script src="/scripts/js/dd_belatedpng.js"></script>
+    <![endif]-->      
+  
+    <!-- jQuery, SWFObject & uTube JS -->  
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.5.5/jquery.validate.min.js"></script>
+    
+    <script type="text/javascript" src="/scripts/js/linktracking.js"></script>
+    <script type="text/javascript" src="/scripts/uTube/chromeless.player.js"></script>          
+    <script type="text/javascript" src="/scripts/js/jquery.lightbox-0.5.js"></script>
+    <script src="/scripts/js/jquery.bxSlider.min.js" type="text/javascript"></script>
+    <script src="/scripts/js/script.js" type="text/javascript"></script>
+    <script src="/scripts/js/coin-slider.min.js"></script>
+  
+    <asp:contentplaceholder id="cp_head" runat="server"></asp:contentplaceholder>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('a.lightbox').lightBox(); // Select all links with lightbox class
+
+            $('.AverageStats .dropdown').click(function () {
+                $(this).parent().find('.contents').slideToggle('fast');
+            });
+
+            $('#searchButton').click(function () {
+                var search = $('#searchValue').val();
+                window.location.href = '/xsltsearch?search=' + search;
+            });
+          
+          $('#tiprotator').bxSlider({ prevText: '', auto: true, pause: 5000 });
+          
+            $('#Features').coinslider({width: 600, height:335, spw:1, sph:1, delay: 10000, hoverPause: true, 
+                                       navigation: true, opacity: 0.7});
+            });        
+      
+          $('#searchValue').keyup(function(e)
+                                  { 
+                                    if (e.keyCode == 13) {
+                                      $('#searchButton').click(); 
+                                    }
+                                  });
+    </script>
+
+    <meta name="WebsiteSpark" content="tDPXmQAJTi" />
+    <!-- "Hack" to remove Two Title-tags. --> 
+
+    <title runat="server" visible="false"></title>     
+    </head>  
+  <body>       
+    <form id="umbMasterForm" runat="server">    
+        <div id="pagecontainer" class="container_11">                    
+            <div id="header">                    
+                <div id="siteBanner" class="grid_3 nogap">                   
+                  <h1><a href="/"><span class="part1">f1</span><span class="part2">speed</span><span class="par1">guides</span></a></h1>                                       
+                </div>
+                <div class="grid_8 omega">
+                  <umbraco:Macro Alias="AdHeader" runat="server"></umbraco:Macro>
+                </div>
+                <div id="topNavigation">            
+                    <div class="SearchArea">          
+                        <input id="searchValue" type="text" value="" name="search" />
+                        <input id="searchButton" type="button" Value="" />          
+                    </div>
+                    <umbraco:macro alias="MainMenu" runat="server"></umbraco:macro>                                        
+                </div>
+            </div>                                               
+            <div id="body">
+                <div class="grid_11 nogap">
+                    <asp:contentplaceholder id="breadcrumb" runat="server">
+                        <umbraco:Macro Alias="Breadcrumb" runat="server"></umbraco:Macro>
+                        <div class="clear"></div>
+                    </asp:contentplaceholder>
+                              
+                    <asp:contentplaceholder id="cp_title" runat="server">
+                        <h2><umbraco:Item field="pageName" runat="server"></umbraco:Item></h2>
+                    </asp:contentplaceholder>
+                    <asp:contentplaceholder id="cp_content" runat="server" />                                          
+                </div>
+                <div class="clear"></div>      
+                <umbraco:Macro ID="Macro2" Alias="AdFooter" runat="server"></umbraco:Macro>                 
+            </div>                        
+            <div id="footer">        
+                <div id="innerfooter">
+                    <umbraco:Macro Alias="SiteFooter" runat="server"></umbraco:Macro>                    
+                </div>
+                <div class="perm">              
+                    <div class="list center">                
+                        <div class="owner">
+                            <a href="/sitemap">Sitemap</a>
+                        </div>                            
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </form>     
+
+    <div id="fb-root"></div>              
+    <script type="text/javascript" src="/scripts/js/jquery.timers.js"></script>
+    <script type="text/javascript" src="/scripts/js/default.js"></script>
+    <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jQuery.Validate/1.6/jQuery.Validate.min.js"></script>
+    <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js#appId=212256185471696&amp;xfbml=1"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-2063253-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();    
+    </script>
+  </body>
+</html>
+</asp:content>

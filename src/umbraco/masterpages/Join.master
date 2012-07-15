@@ -1,0 +1,16 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cp_content" runat="server">
+<div id="content" class="grid_11 alpha nogap">  
+  <umbraco:Item ID="Item2" runat="server" field="bodyText" />  
+</div>
+<div class="ContactForm grid_7 push_2">
+  <umbraco:Macro 
+    runat="server"
+    FileLocation="~/macroScripts/CultivContactForm.cshtml"
+    MailFrom="atomicf1@ragware.net" 
+    MailFromName="atomicf1.com" 
+    MailSubject="AtomicF1 Join Request" 
+    MailIntroText="The following has been sent from AtomicF1's join page:"
+    EmailFieldName="robert@ragware.net" />
+</div>
+</asp:Content>

@@ -1,0 +1,50 @@
+﻿table.MessageContainer { width: 80%; margin: auto; margin-bottom: 10px; margin-top: 10px; height: 70px; }
+table.MessageContainer .Buttons { text-align: center; padding-top: 20px; margin-left: -70px; }
+table.MessageContainer .Buttons input { border: none; }
+
+.MessageContainer tr td.Message {				
+	font-weight: bold;	
+	font-size: 1.1em;
+	padding: 10px;			
+	padding-left: 70px;
+	vertical-align: middle;
+	display:table-cell;
+}
+
+.MessageContainer.Success tr td.Message
+{	
+	color: #57a710 ;	
+	border: 1px solid #9fd845;	
+	background: url(/images/icons/good-icon.png) no-repeat 5px 10px #f5fbec;
+}
+
+.MessageContainer.Warning tr td.Message
+{
+	color: #ff591f;	
+	border: 1px solid #ff983e;
+	background: url(/images/icons/caution-icon.png) no-repeat 5px 10px #fff4eb;	
+}
+
+.MessageContainer.Failure tr td.Message
+{	
+	color: #d03c3c;	
+	border: 1px solid #d03c3c;
+	background: url(/images/icons/error-icon.png) no-repeat 5px 10px #faebeb;	
+}
+
+.MessageContainer.Information tr td.Message
+{	
+	color: #4F7BFF;	
+	border: 1px solid #7799FF;
+	background: url(/images/icons/info-icon.png) no-repeat 5px 10px #EDF1FF;	
+}
+
+.MessageContainer.Tip tr td.Message 
+{
+    background: #E6F7FF url(/images/icons/info-icon-small.png) no-repeat 5px 10px;
+    border: 1px solid #BFE4FF;
+    padding: 5px 10px 5px 40px;
+    margin: 10px 5px 20px 5px;
+    color: #000000;
+    font-weight: normal;
+}

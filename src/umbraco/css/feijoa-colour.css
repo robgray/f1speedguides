@@ -1,0 +1,511 @@
+/* Color overrides and settings relating to themes
+ - this file gets apended to when someone runs the skin config front-end so watch out that it doesn't grow too ridculously big :)
+ - I'm fully aware this could be rationalised and be a bit neater.
+*/
+#content a, #content a:active, #content a:visited, #subNavigation a, #subNavigation a:active, #subNavigation a:visited
+{
+    color: #3688AF;
+}
+
+/* Navigation */
+
+#subNavigation li a
+{
+    border-left: solid 1px #ccc;
+}
+
+#top a
+{
+    color: #fff;
+    color: rgba(255,255,255,0.9);
+}
+
+/* Site Name & Description */
+#siteName
+{
+    text-shadow: 1px 1px 1px rgba(40,40,40, 0.7);
+}
+
+#siteName a
+{
+    color: #fff;
+}
+
+#siteDescription
+{
+    color: rgb(140,210,236);
+    -moz-text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+    -webkit-text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    border-left: 1px solid rgba(255,255,255,0.2);
+    border-bottom: none;
+}
+
+/* Meta Data Styles */
+#content .entry-meta a, #content .meta, #content a.tagweight0, #content a.tagweight1, #content a.tagweight2, #content a.tagweight3, #content a.tagweight4, #content a.tagweight5
+{
+    color: #fff;
+    background: rgba(54,136,175, 0.6);
+}
+
+#content .comments-link a
+{
+    color: #fff;
+    background: #333;
+}
+
+a.tagweight0
+{
+    background: rgba(54,136,175, 0.1);
+}
+
+a.tagweight1
+{
+    background: rgba(54,136,175, 0.6);
+}
+
+a.tagweight2, a.tagweight3, a.tagweight4
+{
+    background: rgba(54,136,175, 0.9);
+}
+
+.entry-date
+{
+    color: #aaa;
+}
+
+.author .fn
+{
+    color: #333;
+}
+
+small
+{
+    color: #999999;
+}
+
+.error
+{
+    color: #fff;
+    background: #ff0000;
+}
+
+.meta-sep
+{
+    color: transparent;
+    border-right: 1px solid #ccc;
+}
+
+/* Comment Styles */
+#gravatar, .commentlist .photo
+{
+    box-shadow: -1px 3px 3px rgba(30,30,30, 0.3);
+    -moz-box-shadow: -1px 3px 3px rgba(30,30,30, 0.3);
+    -webkit-box-shadow: -1px 3px 3px rgba(30,30,30, 0.3);
+}
+
+li.comment
+{
+    border-bottom: dotted 1px #ccc;
+}
+
+ol.commentlist li
+{
+    background: rgba(255,255,255,0.7);
+}
+
+.commentlist .photo
+{
+    border: 2px solid #3688AF;
+}
+
+#commentPosted
+{
+    background: #3688AF;
+    color: #fff;
+}
+
+#comments, #tagcloud, #sidebar
+{
+    border-left: 1px dotted #ccc;
+}
+
+.comment-meta
+{
+    color: #999999;
+}
+
+.entry-meta
+{
+    border-top: dotted 1px #ccc;
+}
+
+.entry-content img
+{
+    border: 1px solid #ccc;
+    box-shadow: -1px 1px 3px rgba(30,30,30, 0.3);
+    -moz-box-shadow: -1px 1px 3px rgba(30,30,30, 0.3);
+    -webkit-box-shadow: -1px 1px 3px rgba(30,30,30, 0.3); /*-moz-transform:rotate(-1deg);         -webkit-transform:rotate(-1deg);*/
+}
+
+.image-text
+{
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.comments-link a
+{
+    background: #333 !important;
+}
+
+#archive h3, #archieve h3
+{
+    border-bottom: 1px solid #ccc;
+}
+#archive h4, #archieve h4
+{
+    background-color: #efefef;
+}
+
+#gravatar, .commentlist .photo
+{
+    border: 4px solid #3688AF;
+    box-shadow: -1px 3px 3px rgba(30,30,30, 0.3);
+    -moz-box-shadow: -1px 3px 3px rgba(30,30,30, 0.3);
+    -webkit-box-shadow: -1px 3px 3px rgba(30,30,30, 0.3);
+}
+
+.commentlist .photo
+{
+    border: 2px solid #3688AF;
+}
+
+#commentPosted
+{
+    background: #3688AF;
+    color: #fff;
+}
+
+#comments, #tagcloud
+{
+    border-left: 1px dotted #ccc;
+}
+
+#comments h3, #tagcloud h3, #respond h3, #sidebar h3, #tagcloud .alt h3
+{
+    color: #333;
+    text-shadow: 0px -1px 1px rgba(0,0,0,0.3);
+    border-bottom: 1px dotted #ccc;
+}
+
+input.error, #respond .form-input input.error
+{
+    background: #fff;
+    color: #000;
+    border: 2px solid #ff0000;
+}
+
+#blogroll ul li
+{
+    background: url("/css/feijoa/tinyarrow.png") no-repeat scroll left 4px;
+}
+
+.formcontainer
+{
+    background: #fff;
+}
+
+#respond .form-input input, #respond .form-input textarea, #respond .form-submit input
+{
+    background: #efefef;
+    border: 1px solid rgba(80,80,80, 0.2);
+}
+
+#respond .form-input input:focus, #respond .form-input textarea:focus
+{
+    border: 1px solid rgba(45,45,45, 0.9);
+}
+
+#respond .form-submit input, fieldset input[type=submit]
+{
+    background: #3688AF;
+    color: #fff;
+    text-shadow: 1px 1px 2px #3688AF;
+    box-shadow: -1px 1px 8px rgba(30,30,30, 0.2);
+    -moz-box-shadow: -1px 1px 8px rgba(30,30,30, 0.2);
+    -webkit-box-shadow: -1px 1px 8px rgba(30,30,30, 0.2);
+    -pie-background: linear-gradient(90deg, #84b5ce, rgba(54, 136, 175)); /*PIE /* I know I probably shouldn't */
+    background-image: url(/css/feijoa/gradient-black-bottom.jpg);
+    background-image: -moz-linear-gradient(center bottom , rgba(54, 136, 175, 1)  0%, rgba(54, 136, 175, 0.6) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1, rgba(54, 136, 175, 1)), color-stop(0, rgba(54, 136, 175, 0.6)));
+    background-repeat: repeat-x;
+    border: 1px solid rgba(54, 136, 175, 0.9);
+}
+
+#respond h3, #tagcloud .alt h3
+{
+    color: #333;
+    border-bottom: solid 1px #ccc;
+    background: none;
+}
+
+#related ul
+{
+    background: #EFEFEF;
+    background: -moz-linear-gradient(top, rgb(245,245,245) 0, rgb(255,255,255) 30%, rgb(245,245,245) 100%) repeat scroll 0 0 transparent;
+    background: -webkit-gradient(linear,left top, left bottom,color-stop(0, rgb(245,245,245)),color-stop(0.3, rgb(255,255,255)), color-stop(1, rgb(245,245,245)));
+    border-top: 1px dotted #ccc;
+    border-bottom: 1px dotted #ccc;
+}
+
+#related ul li
+{
+    background: url(feijoa/post.png) no-repeat #fff;
+    -moz-box-shadow: 0px -2px 5px #ccc;
+    -webkit-box-shadow: 0px -2px 5px #ccc;
+}
+
+ul.helper-links li a
+{
+    border-right: 1px solid #ccc;
+}
+
+.dark ul.helper-links li a
+{
+    border-right: 1px solid #333;
+}
+
+span.blog
+{
+    box-shadow: 1px 1px 3px #CCCCCC;
+    -moz-box-shadow: 1px 1px 3px #CCCCCC;
+    -webkit-box-shadow: 1px 1px 3px #CCCCCC;
+}
+
+.footer
+{
+    background-image: url(/css/feijoa/scratch2.png);
+    background-position: 0 -30px;
+    background-repeat: no-repeat;
+}
+
+
+#twitter
+{
+    background: url("/css/feijoa/footer-gfx.png") no-repeat scroll right 2px transparent;
+}
+
+#feijoa
+{
+    background: url("/css/feijoa/footer-gfx.png") no-repeat scroll right -129px transparent;
+}
+
+#rss
+{
+    background: url("/css/feijoa/footer-gfx.png") no-repeat scroll right -200px transparent;
+}
+
+/* Light Theme Defaults */
+#siteName
+{
+    text-shadow: 1px 1px 1px #333;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+}
+#siteName a
+{
+    color: #fff;
+    color: rgba(255,255,255,1);
+}
+
+#topNavigation li a
+{
+    color: #fff;
+    color: rgba(255,255,255,0.8);
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.8);
+}
+
+#topNavigation li.current span.marker, #topNavigation li.current:after
+{
+    background: #fff !important;
+}
+
+#comments h3, #tagcloud h3, respond h3, #sidebar h3, #tagcloud .alt h3
+{
+    color: #333;
+    text-shadow: rgba(0,0,0,0.8);
+}
+
+#respond .form-input input:focus, #respond .form-input textarea:focus
+{
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+#respond .form-submit input, fieldset input[type=submit]
+{
+    color: rgba(255,255,255,0.8);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    box-shadow: -1px 1px 8px rgba(0,0,0,0.8);
+    -moz-box-shadow: -1px 1px 8px rgba(0,0,0,0.8);
+    -webkit-box-shadow: -1px 1px 8px rgba(0,0,0,0.8);
+}
+
+
+
+
+/*business package specific */
+.frontPage a[href^=http://feeds]{color: #0d69a6 ;}
+
+#siteName{text-shadow: 1px 1px 1px rgba(0,0,0,0.28);}
+#topNavigation li a{text-shadow:0px 1px 1px rgba(0,0,0,0.18);}
+#themetype #top:before{border-color: rgba(0,0,0,0.18) !important;}
+#comments h3, #tagcloud h3, #respond h3,
+#sidebar h3, #tagcloud .alt h3{text-shadow: 0px 1px 1px rgba(0,0,0,0.18);}
+#respond .form-submit input, fieldset input[type=submit]{
+text-shadow:1px 1px 2px rgba(0,0,0,0.18);
+box-shadow: -1px 1px 8px rgba(0,0,0,0.18);
+-moz-box-shadow: -1px 1px 8px rgba(0,0,0,0.18);
+-webkit-box-shadow: -1px 1px 8px rgba(0,0,0,0.18);
+}
+/* end Blue theme defaults */   
+
+    
+/* umbraco skin overrides after this line */
+
+
+
+        #content a, #content a:active, #content a:visited,
+        #subNavigation a, #subNavigation a:active, #subNavigation a:visited,
+        .dark #content a, .dark #content a:active, .dark #content a:visited,
+        .dark #subNavigation a, .dark #subNavigation a:active, .dark #subNavigation a:visited{color: ;}
+        #content a:hover, .dark #content a:hover{color: ;}
+        #themetype #siteName a{color:  !important;}
+        #themetype #topNavigation li a{color: !important;}
+            
+        #siteDescription, .light #siteDescription, .dark #siteDescription{color: ;}
+        #siteDescription, .light #siteDescription{
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.03);
+        -moz-text-shadow: 1px 1px 1px rgba(0,0,0,0.03);
+        -webkit-text-shadow: 1px 1px 1px rgba(0,0,0,0.03);
+        }
+        .dark #siteDescription{}
+
+        #content .entry-meta a, #content .meta,
+        #content a.tagweight0, #content a.tagweight1, #content a.tagweight2,
+        #content a.tagweight3, #content a.tagweight4, #content a.tagweight5, .frontPage small
+        {color: #fff;background: ;opacity:0.3;}
+        a.tagweight0{opacity:0.1;}
+        a.tagweight1{opacity:0.6;}
+        a.tagweight2, a.tagweight3, a.tagweight4{opacity:1;}
+
+        .commentlist .photo{border:2px solid ;}
+
+        #commentPosted{
+        background: ;
+        color: ;
+        }
+
+        #respond .form-submit input, fieldset input[type=submit]{
+        background: ;
+        filter:progid:DXImageTransform.Microsoft.gradient( endColorstr= startColorstr=);
+        -ms-filter:"progid:DXImageTransform.Microsoft.gradient( endColorstr= startColorstr=)";
+        background-image: url();
+        background-image: -moz-linear-gradient(center bottom ,   0%,  100%);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1, ), color-stop(0, ));
+        border:1px solid ;
+        }
+
+        #footer .colour-filter{
+        background: ;
+        filter:progid:DXImageTransform.Microsoft.gradient(endColorstr= startColorstr=);
+        -ms-filter:"progid:DXImageTransform.Microsoft.gradient(endColorstr= startColorstr=)";
+        background-image: -moz-linear-gradient(center bottom ,   0%,  100%);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1, ), color-stop(0, ));
+        background-repeat:repeat-x;
+        opacity:0.2;}
+
+        #footer .footer{background-image:url();background-repeat:no-repeat;}
+
+        /*business package specific */
+        .frontPage a[href^=http://feeds]{color:  !important;}
+
+
+        /* Dark Theme */
+        #themetype.dark{color:#fff; color: rgba(255,255,255, 0.03);}
+        #themetype.dark #siteName{text-shadow: 1px 1px 1px rgba(255,255,255,0.03);}
+        #themetype.dark #topNavigation li a{text-shadow:0px 1px 1px rgba(255,255,255,0.03);}
+
+        .dark .entry-date .day{
+        -moz-box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.25);
+        -webkit-box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.25);
+        border-color: rgba(255, 255, 255, 0.5);}
+
+        #themetype.dark #comments h3, #themetype.dark #tagcloud h3, #themetype.dark #respond h3,
+        #themetype.dark #sidebar h3, #themetype.dark #tagcloud .alt h3{
+        text-shadow: 0px 1px 1px rgba(0,0,0,0.03);
+        border-bottom: 1px dotted rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.9);}
+
+        .dark #content .entry-meta a, .dark #content .meta,
+        .dark #content a.tagweight0, .dark #content a.tagweight1, .dark #content a.tagweight2,
+        .dark #content a.tagweight3, .dark #content a.tagweight4, .dark #content a.tagweight5, .frontPage small{
+        color: ;
+        background: ;
+        opacity:0.4;}
+
+        #themetype.dark #respond .form-input input:focus, #themetype.dark #respond .form-input textarea:focus{
+        border-color:rgba(255,255,255,0.03);}
+        #themetype.dark #respond .form-submit input, #themetype.dark fieldset input[type=submit]{
+        text-shadow:1px 1px 2px rgba(255,255,255,0.03);
+        box-shadow: -1px 1px 8px rgba(255,255,255,0.03);
+        -moz-box-shadow: -1px 1px 8px rgba(255,255,255,0.03);
+        -webkit-box-shadow: -1px 1px 8px rgba(255,255,255,0.03);}
+        .dark #topNavigation li a{border: solid 1px rgba(255,255,255,0.12); background: rgba(255,255,255,0.0.8);}
+        
+        /* Light Theme */
+        #themetype.light #siteName{text-shadow: 1px 1px 1px rgba(0,0,0,0.03);}
+        #themetype.light #topNavigation li a{text-shadow:0px 1px 1px rgba(0,0,0,0.03);}
+        #themetype.light #top:before{border-color: rgba(0,0,0,0.03);}
+        #themetype.light #comments h3, #themetype.light #tagcloud h3, #themetype.light #respond h3,
+        #themetype.light #sidebar h3, #themetype.light #tagcloud .alt h3{text-shadow: 0px 1px 1px rgba(0,0,0,0.03);}
+        #themetype.light #respond .form-submit input, #themetype.light fieldset input[type=submit]{
+        text-shadow:1px 1px 2px rgba(0,0,0,0.03);
+        box-shadow: -1px 1px 8px rgba(0,0,0,0.03);
+        -moz-box-shadow: -1px 1px 8px rgba(0,0,0,0.03);
+        -webkit-box-shadow: -1px 1px 8px rgba(0,0,0,0.03);
+        }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

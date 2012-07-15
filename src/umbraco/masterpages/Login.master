@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
+
+<script runat="server">  
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            if (Request.IsAuthenticated)
+            {
+                Response.Redirect("/");
+            }
+        }
+    }
+</script>
+
+<asp:content ContentPlaceHolderId="cp_head" runat="server">
+  
+</asp:content>
+
+<asp:content ContentPlaceHolderId="cp_top" runat="server">
+  
+</asp:content>
+
+<asp:content ContentPlaceHolderId="breadcrumb" runat="server">
+  
+</asp:content>
+
+<asp:content ContentPlaceHolderId="cp_title" runat="server">
+  
+</asp:content>
+
+<asp:content ContentPlaceHolderId="cp_content" runat="server">    
+    <div class="Login">
+        <asp:Login ID="Login1" runat="server"
+            UserNameLabelText="Username"
+            PasswordLabelText="Password"
+            TitleText=""
+            TextLayout="TextOnTop"           
+            LoginButtonType="Link" RememberMeSet="True" RenderOuterTable="False"
+                VisibleWhenLoggedIn="False" DestinationPageUrl="/" RememberMeText="Remember Me"
+            EnableViewState="False">            
+            <LayoutTemplate>
+                <table cellpadding="1" cellspacing="0" style="border-collapse:collapse;">
+                    <tr>
+                        <td>
+                            <table cellpadding="0">
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">Username</asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="UserNameRequired" runat="server"
+                                            ControlToValidate="UserName" ErrorMessage="User Name is required."
+                                            ToolTip="User Name is required." ValidationGroup="ctl00$Login1">*</asp:RequiredFieldValidator>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Password</asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="PasswordRequired" runat="server"
+                                            ControlToValidate="Password" ErrorMessage="Password is required."
+                                            ToolTip="Password is required." ValidationGroup="ctl00$Login1">*</asp:RequiredFieldValidator>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="RememberMe">
+                                        <asp:CheckBox ID="RememberMe" runat="server" Checked="True"
+                                            Text="" />
+                                        <asp:Label runat="Server">Remember Me</asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="color:Red;">
+                                        <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <asp:LinkButton ID="LoginLinkButton" runat="server" CommandName="Login"
+                                            CssClass="button" ValidationGroup="ctl00$Login1">Log In</asp:LinkButton>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </LayoutTemplate>
+            <LoginButtonStyle CssClass="button" />
+        </asp:Login>                  
+    </div>
+</asp:content>

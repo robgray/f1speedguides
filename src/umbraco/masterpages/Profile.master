@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SiteMaster.master" AutoEventWireup="true" %>
+
+<asp:content ContentPlaceHolderId="cp_head" runat="server">
+<script src="/umbraco/plugins/tinymce3/tinymce3tinymceCompress.aspx?rnd=dbeef506-d146-468c-9b1f-967f7c42a128&amp;module=gzipmodule&amp;themes=umbraco&amp;plugins=contextmenu,umbracomacro,noneditable,inlinepopups,table,advlink,media,paste,spellchecker,umbracoimg,umbracocss&amp;languages=en" type="text/javascript"></script>
+<script type="text/javascript">
+tinyMCE.init({
+    mode: "exact",
+    elements: "ctl00_ctl00_ctl00_ContentPlaceHolderDefault_cp_content_ModifyProfile_6_AboutTextBox",
+    theme: "umbraco",  //(n.b. no trailing comma, this will be critical as you experiment later)    
+    width: "950",
+    height: "1000"
+});
+</script>  
+</asp:content>
+
+<asp:content ContentPlaceHolderId="cp_top" runat="server">
+  
+</asp:content>
+
+<asp:content ContentPlaceHolderId="breadcrumb" runat="server">
+  
+</asp:content>
+
+<asp:content ContentPlaceHolderId="cp_title" runat="server">
+  
+</asp:content>
+
+<asp:content ContentPlaceHolderId="cp_content" runat="server">
+    <h2>Profile</h2>
+    <div>
+        <p>To change your password, click <a href="/changepassword">here</a>.</p>
+    </div>
+    <umbraco:Macro Alias="ModifyProfile" runat="server"></umbraco:Macro>
+</asp:content>
